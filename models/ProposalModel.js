@@ -10,7 +10,7 @@ const pressReleaseSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    contentLang: String,
+    contentLang:{ type:String,default:'english'},
     crypto: {
         type: Boolean,
         default: false
@@ -20,7 +20,7 @@ const pressReleaseSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    geoLoc: String,
+    region: { type:String,default:'USA'},
     googleind: {
         type: Boolean,
         default: true
@@ -29,7 +29,7 @@ const pressReleaseSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    mediaKitPri: String,
+    price: String,
     offEmail: String,
     offcategory: String,
     socialshare: {
@@ -38,10 +38,10 @@ const pressReleaseSchema = new mongoose.Schema({
     },
     telId: String,
     uploadpdf: Object,
-    websiteDescription: String,
+    decription: String,
     websiteLink: String,
     websiteLogo: String,
-    websiteName: String
+    name: String
 });
 
 const PressRelease = mongoose.model('PressRelease', pressReleaseSchema);
