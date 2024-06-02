@@ -17,11 +17,6 @@ exports.signup = async (req, res) => {
       const newUser = new User({
         name,
         email,
-        phone,
-        gender,
-        howDidYouHear,
-        city,
-        state,
         password
       });
   
